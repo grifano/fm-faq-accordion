@@ -1,0 +1,125 @@
+/*** Fonts ***/
+/* fraunces-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Fraunces_144pt-SemiBold.woff') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url('../fonts/Fraunces_144pt-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/manrope-v15-latin-regular.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url('../fonts/manrope-v15-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/*** html & body ***/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--white);
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+/*** Visually hide element, but keep visible for search engine ***/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*** Section global vertical padding ***/
+.section {
+  scroll-margin-top: 60px;
+}
+
+/*** Buttons ***/
+.button {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  padding: 12px 24px;
+  color: var(--dark-purple);
+  background: var(--eucaplyptus);
+  min-width: 113px;
+  min-height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    min-width: 133px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button {
+    padding: 13px 32px 16px;
+    min-width: 161px;
+    min-height: 61px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  /* Hover/focus only for desktop */
+  .button:hover,
+  .button:focus {
+    outline: none;
+    background-color: transparent;
+    border-color: var(--eucaplyptus);
+    color: var(--eucaplyptus);
+  }
+}
+
+/*** Container ***/
+.container {
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 689px;
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1032px;
+    padding: 0px 40px;
+  }
+}
+
+/*** Headings ***/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--second-family);
+}
